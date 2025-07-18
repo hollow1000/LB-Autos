@@ -136,7 +136,7 @@ body {
 }
 
 .booking-btn {
-    padding: 0 !important;
+    padding: 0 2rem !important;
     margin: 0 !important;
     background: black !important;
     color: #FFFFFF !important;
@@ -149,11 +149,16 @@ body {
     border-radius: 40px !important;
     text-transform: uppercase;
     margin-right: 20px !important;
+    font-size: 0.8rem;
 }
 
 .booking-btn:hover {
     background: grey !important;
     color: #FFFFFF !important;
+}
+
+.close-icon{
+    cursor: pointer;
 }
 
 /*** Navbar ***/
@@ -189,6 +194,13 @@ body {
     .navbar-light .navbar-nav {
         border-top: 1px solid #EEEEEE;
     }
+
+    .booking-btn {
+        position: relative;
+        left: 1.1rem;
+        bottom: 10px;
+        width: 90% !important;
+    }
 }
 
 .navbar-light .navbar-brand,
@@ -210,7 +222,7 @@ body {
     .navbar .nav-item .dropdown-menu {
         display: block;
         border: none;
-        margin-top: 0;
+        margin-top: 10px;
         top: 150%;
         opacity: 0;
         visibility: hidden;
@@ -403,7 +415,7 @@ body {
 
 /*** Footer ***/
 .footer {
-    background: linear-gradient(rgba(0, 0, 0, .9), rgba(0, 0, 0, .9)), url(../img/carousel-bg-1.jpg) center center no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, .9), rgba(0, 0, 0, .9)), url(../img/IMG-20250715-WA0073.jpg) center center no-repeat;
     background-size: cover;
 }
 
