@@ -346,6 +346,24 @@ body {
 
 
 /*** Team ***/
+.team-item img{
+    border-radius: 50px;
+}
+
+.team-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 123, 255, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: 0.3s; 
+}
+
 .team-item .team-overlay {
     display: flex;
     align-items: center;
@@ -357,6 +375,7 @@ body {
 
 .team-item:hover .team-overlay {
     transform: scale(1);
+    opacity: 1;
 }
 
 .team-item .team-overlay .btn {
