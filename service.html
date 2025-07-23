@@ -3,13 +3,13 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Lady Benz Automechanic Ltd</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Lady Benz Automechanic Limited® – Mercedes-Benz Repair & Training</title>
+    <meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
 
     <!-- Favicon -->
-    <link href="img/logo.png" rel="icon">
+  <link href="img/logo.png" rel="icon">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,7 +18,7 @@
 
     <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
 
     <!-- Libraries Stylesheet -->
     <link href="lib/animate/animate.min.css" rel="stylesheet">
@@ -27,28 +27,30 @@
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"> -->
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+    <!-- Add Google Material Icons for modern UI elements -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
 <body>
     <!-- Spinner Start -->
-    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-        <div class="spinner-border text-secondary" style="width: 3rem; height: 3rem;" role="status">
-            <span class="sr-only">Loading...</span>
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center" aria-label="Loading">
+        <div class="spinner-border text-secondary" style="width: 3rem; height: 3rem;" role="status" aria-live="polite">
+            <span class="visually-hidden">Loading...</span>
         </div>
     </div>
     <!-- Spinner End -->
-
-
-    <!-- Topbar Start -->
+     <!-- Topbar Start -->
     <div class="container-fluid bg-light p-0">
         <div class="row gx-0 d-none d-lg-flex">
             <div class="col-lg-7 px-5 text-start">
                 <div class="h-100 d-inline-flex align-items-center py-3 me-4">
                     <small class="fa fa-map-marker-alt text-secondary me-2"></small>
-                    <small>123 Street, New York, USA</small>
+                    <small>Km 41, Lekki-Epe Expressway, Abijo GRA Junction, Lagos, Nigeria</small>
                 </div>
                 <div class="h-100 d-inline-flex align-items-center py-3">
                     <small class="far fa-clock text-secondary me-2"></small>
@@ -58,13 +60,13 @@
             <div class="col-lg-5 px-5 text-end">
                 <div class="h-100 d-inline-flex align-items-center py-3 me-4">
                     <small class="fa fa-phone-alt text-secondary me-2"></small>
-                    <small>+012 345 6789</small>
+                    <small>+234 803 551 6634</small>
                 </div>
                 <div class="h-100 d-inline-flex align-items-center">
-                    <a class="btn btn-sm-square bg-white text-secondary me-1" href=""><i class="fab fa-facebook-f"></i></a>
-                    <a class="btn btn-sm-square bg-white text-secondary me-1" href=""><i class="fab fa-twitter"></i></a>
-                    <a class="btn btn-sm-square bg-white text-secondary me-1" href=""><i class="fab fa-linkedin-in"></i></a>
-                    <a class="btn btn-sm-square bg-white text-secondary me-0" href=""><i class="fab fa-instagram"></i></a>
+                    <a class="btn btn-sm-square bg-white text-secondary me-1" href="https://facebook.com/ladybenzng"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-sm-square bg-white text-secondary me-1" href="https://twitter.com/ladybenzng"><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-sm-square bg-white text-secondary me-1" href="https://linkedin.com/company/ladybenz"><i class="fab fa-linkedin-in"></i></a>
+                    <a class="btn btn-sm-square bg-white text-secondary me-0" href="https://instagram.com/ladybenzng"><i class="fab fa-instagram"></i></a>
                 </div>
             </div>
         </div>
@@ -76,31 +78,35 @@
     <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
         <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
             <img src="img/logo.png" alt="Lady Benz Logo" height="48" class="me-2"/>
-            <span class="fs-4 text-secondary fw-bold">Lady Benz Automechanic Ltd<sup>®</sup></span>
+            <span class="fs-4 text-secondary fw-bold">Lady Benz Automechanic<sup>®</sup></span>
         </a>
-        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-label="Toggle navigation" id="menuToggle">
             <span class="navbar-toggler-icon"></span>
+            <span class="close-icon d-none" style="font-size : 1.5rem;">&times;</span>
         </button>
-        <div class="collapse navbar-collapse btn-sm py-1 align-items-center" id="navbarCollapse">
+        <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto p-4 p-lg-0">
-                <a href="index.html" class="nav-item nav-link">Home</a>
+                <a href="index.html" class="nav-item nav-link active">Home</a>
                 <a href="about.html" class="nav-item nav-link">About</a>
-                <a href="service.html" class="nav-item nav-link active">Services</a>
+                <a href="service.html" class="nav-item nav-link">Services</a>
                 <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">More</a>
                     <div class="dropdown-menu fade-up m-0">
                         <a href="booking.html" class="dropdown-item">Booking</a>
                         <a href="team.html" class="dropdown-item">Technicians</a>
                         <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                        <a href="404.html" class="dropdown-item">404 Page</a>
+                        <a href="#faq" class="dropdown-item">FAQ</a>
+                        <a href="training.html" class="dropdown-item">Training</a>
+                        <a href="gallery.html" class="dropdown-item"></a>
                     </div>
                 </div>
                 <a href="contact.html" class="nav-item nav-link">Contact</a>
             </div>
-            <!-- <a href="" class="btn btn-primary btn-sm px-3 py-1 rounded-pill ms-3 d-inline-flex align-items-center ms-0" style="max-height: 50px">Get A Quote<i class="fa fa-arrow-right ms-3"></i></a>
-        </div> -->
+            <a href="booking.html" class="booking-btn">Book A Session<i class="fa fa-arrow-right ms-2"></i></a>
+        </div>
     </nav>
     <!-- Navbar End -->
+
 
 
     <!-- Page Header Start -->
@@ -125,27 +131,27 @@
     <div class="container-xxl service py-5">
         <div class="container">
             <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                <h6 class="text-warning text-uppercase">// Our Services //</h6>
-                <h1 class="mb-5">Explore Our Services</h1>
+                <h6 class="text-warning text-uppercase">// Mercedes-Benz Specialist Services //</h6>
+                <h1 class="mb-5">Comprehensive Mercedes-Benz Care</h1>
             </div>
             <div class="row g-4 wow fadeInUp" data-wow-delay="0.3s">
                 <div class="col-lg-4">
                     <div class="nav w-100 nav-pills me-4">
                         <button class="nav-link w-100 d-flex align-items-center text-start p-4 mb-4 active" data-bs-toggle="pill" data-bs-target="#tab-pane-1" type="button">
-                            <i class="fa fa-car-side fa-2x me-3"></i>
-                            <h4 class="m-0">Diagnostic Test</h4>
+                            <i class="fa fa-laptop-code fa-2x me-3"></i>
+                            <h4 class="m-0">Advanced Diagnostics</h4>
                         </button>
                         <button class="nav-link w-100 d-flex align-items-center text-start p-4 mb-4" data-bs-toggle="pill" data-bs-target="#tab-pane-2" type="button">
-                            <i class="fa fa-car fa-2x me-3 text-warning"></i>
-                            <h4 class="m-0">Engine Servicing</h4>
+                            <i class="fa fa-cogs fa-2x me-3"></i>
+                            <h4 class="m-0">Engine & Transmission</h4>
                         </button>
                         <button class="nav-link w-100 d-flex align-items-center text-start p-4 mb-4" data-bs-toggle="pill" data-bs-target="#tab-pane-3" type="button">
-                            <i class="fa fa-cog fa-2x me-3 text-warning"></i>
-                            <h4 class="m-0">Tires Replacement</h4>
+                            <i class="fa fa-microchip fa-2x me-3"></i>
+                            <h4 class="m-0">ECU Programming</h4>
                         </button>
                         <button class="nav-link w-100 d-flex align-items-center text-start p-4 mb-0" data-bs-toggle="pill" data-bs-target="#tab-pane-4" type="button">
-                            <i class="fa fa-oil-can fa-2x me-3 text-warning"></i>
-                            <h4 class="m-0">Oil Changing</h4>
+                            <i class="fa fa-tools fa-2x me-3"></i>
+                            <h4 class="m-0">Maintenance Service</h4>
                         </button>
                     </div>
                 </div>
@@ -155,17 +161,24 @@
                             <div class="row g-4">
                                 <div class="col-md-6" style="min-height: 350px;">
                                     <div class="position-relative h-100">
-                                        <img class="position-absolute img-fluid w-100 h-100" src="img/IMG-20250715-WA0097.jpg"
-                                            style="object-fit: cover;" alt="">
+                                        <img class="position-absolute img-fluid w-100 h-100" 
+                                             src="img/work8.jpeg"
+                                             style="object-fit: cover;" 
+                                             alt="Mercedes-Benz diagnostic testing">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
-                                    <h3 class="mb-3">15 Years Of Experience In Auto Servicing</h3>
-                                    <p class="mb-4 text-capitalize">At Lady Benz Autos, we are inclined to give you the best service we can provide. we make sure to provide the following:</p>
-                                    <p><i class="fa fa-check text-success me-3"></i>Quality Servicing</p>
-                                    <p><i class="fa fa-check text-success me-3"></i>Expert Workers</p>
-                                    <p><i class="fa fa-check text-success me-3"></i>Modern Equipment</p>
-                                    <a href="" class="btn btn-primary py-3 px-5 mt-3">Read More<i class="fa fa-arrow-right ms-3"></i></a>
+                                    <h3 class="mb-3">State-of-the-Art Mercedes-Benz Diagnostics</h3>
+                                    <p class="mb-4">Our advanced diagnostic center features the latest Mercedes-Benz testing equipment and software, enabling us to:</p>
+                                    <ul class="list-unstyled">
+                                        <li><i class="fa fa-check text-warning me-3"></i>Perform comprehensive vehicle scans</li>
+                                        <li><i class="fa fa-check text-warning me-3"></i>Diagnose complex electronic issues</li>
+                                        <li><i class="fa fa-check text-warning me-3"></i>Access Mercedes-Benz factory diagnostics</li>
+                                        <li><i class="fa fa-check text-warning me-3"></i>Generate detailed diagnostic reports</li>
+                                        <li><i class="fa fa-check text-warning me-3"></i>Provide accurate repair recommendations</li>
+                                    </ul>
+                                    <p class="mt-3">Our certified technicians utilize genuine Mercedes-Benz diagnostic tools to ensure accurate fault detection and efficient repairs.</p>
+                                    <a href="booking.html" class="btn btn-warning py-3 px-5 mt-3">Schedule Diagnostic<i class="fa fa-arrow-right ms-3"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -178,12 +191,17 @@
                                     </div>
                                 </div>
                                 <div class="col-md-6">
-                                    <h3 class="mb-3">15 Years Of Experience In Auto Servicing</h3>
-                                    <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
-                                    <p><i class="fa fa-check text-success me-3"></i>Quality Servicing</p>
-                                    <p><i class="fa fa-check text-success me-3"></i>Expert Workers</p>
-                                    <p><i class="fa fa-check text-success me-3"></i>Modern Equipment</p>
-                                    <a href="" class="btn btn-primary py-3 px-5 mt-3">Read More<i class="fa fa-arrow-right ms-3"></i></a>
+                                    <h3 class="mb-3">Engine & Transmission Services</h3>
+                                    <p class="mb-4">Our comprehensive engine and transmission services include:</p>
+                                    <ul class="list-unstyled">
+                                        <li><i class="fa fa-check text-warning me-3"></i>Engine diagnostics and tune-ups</li>
+                                        <li><i class="fa fa-check text-warning me-3"></i>Transmission fluid changes</li>
+                                        <li><i class="fa fa-check text-warning me-3"></i>Clutch replacement and adjustment</li>
+                                        <li><i class="fa fa-check text-warning me-3"></i>Timing belt and chain replacement</li>
+                                        <li><i class="fa fa-check text-warning me-3"></i>Engine and transmission mounts replacement</li>
+                                    </ul>
+                                    <p class="mt-3">We use advanced diagnostic equipment and genuine Mercedes-Benz parts to ensure your engine and transmission are in optimal condition.</p>
+                                    <a href="booking.html" class="btn btn-warning py-3 px-5 mt-3">Schedule Service<i class="fa fa-arrow-right ms-3"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -196,12 +214,17 @@
                                     </div>
                                 </div>
                                 <div class="col-md-6">
-                                    <h3 class="mb-3">15 Years Of Experience In Auto Servicing</h3>
-                                    <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
-                                    <p><i class="fa fa-check text-success me-3"></i>Quality Servicing</p>
-                                    <p><i class="fa fa-check text-success me-3"></i>Expert Workers</p>
-                                    <p><i class="fa fa-check text-success me-3"></i>Modern Equipment</p>
-                                    <a href="" class="btn btn-primary py-3 px-5 mt-3">Read More<i class="fa fa-arrow-right ms-3"></i></a>
+                                    <h3 class="mb-3">ECU Programming & Chip Tuning</h3>
+                                    <p class="mb-4">Our ECU programming and chip tuning services offer:</p>
+                                    <ul class="list-unstyled">
+                                        <li><i class="fa fa-check text-warning me-3"></i>ECU diagnostics and fault code reading</li>
+                                        <li><i class="fa fa-check text-warning me-3"></i>Reprogramming of engine control units</li>
+                                        <li><i class="fa fa-check text-warning me-3"></i>Performance chip tuning</li>
+                                        <li><i class="fa fa-check text-warning me-3"></i>DPF regeneration and tuning</li>
+                                        <li><i class="fa fa-check text-warning me-3"></i>AdBlue removal and tuning</li>
+                                    </ul>
+                                    <p class="mt-3">We utilize state-of-the-art equipment and software to ensure precise ECU programming and optimal vehicle performance.</p>
+                                    <a href="booking.html" class="btn btn-warning py-3 px-5 mt-3">Schedule ECU Service<i class="fa fa-arrow-right ms-3"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -214,12 +237,17 @@
                                     </div>
                                 </div>
                                 <div class="col-md-6">
-                                    <h3 class="mb-3">15 Years Of Experience In Auto Servicing</h3>
-                                    <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
-                                    <p><i class="fa fa-check text-success me-3"></i>Quality Servicing</p>
-                                    <p><i class="fa fa-check text-success me-3"></i>Expert Workers</p>
-                                    <p><i class="fa fa-check text-success me-3"></i>Modern Equipment</p>
-                                    <a href="" class="btn btn-primary py-3 px-5 mt-3">Read More<i class="fa fa-arrow-right ms-3"></i></a>
+                                    <h3 class="mb-3">Comprehensive Maintenance Service</h3>
+                                    <p class="mb-4">Our maintenance service includes a thorough inspection and servicing of your vehicle's essential systems:</p>
+                                    <ul class="list-unstyled">
+                                        <li><i class="fa fa-check text-warning me-3"></i>Oil and filter changes</li>
+                                        <li><i class="fa fa-check text-warning me-3"></i>Brake system inspection and service</li>
+                                        <li><i class="fa fa-check text-warning me-3"></i>Suspension and steering components check</li>
+                                        <li><i class="fa fa-check text-warning me-3"></i>Fluid level checks and top-ups</li>
+                                        <li><i class="fa fa-check text-warning me-3"></i>Battery health check and replacement</li>
+                                    </ul>
+                                    <p class="mt-3">We ensure your vehicle receives the highest level of care using genuine Mercedes-Benz parts and fluids.</p>
+                                    <a href="booking.html" class="btn btn-warning py-3 px-5 mt-3">Schedule Maintenance<i class="fa fa-arrow-right ms-3"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -231,50 +259,80 @@
     <!-- Service End -->
 
 
-    <!-- Booking Start -->
+        <!-- Booking Start -->
     <div class="container-fluid bg-secondary booking my-5 wow fadeInUp" data-wow-delay="0.1s">
         <div class="container">
             <div class="row gx-5">
                 <div class="col-lg-6 py-5">
                     <div class="py-5">
-                        <h1 class="text-white mb-4">Certified and Award Winning Car Repair Service Provider</h1>
-                        <p class="text-white mb-0">Eirmod sed tempor lorem ut dolores. Aliquyam sit sadipscing kasd ipsum. Dolor ea et dolore et at sea ea at dolor, justo ipsum duo rebum sea invidunt voluptua. Eos vero eos vero ea et dolore eirmod et. Dolores diam duo invidunt lorem. Elitr ut dolores magna sit. Sea dolore sanctus sed et. Takimata takimata sanctus sed.</p>
+                        <h1 class="text-white mb-4">Mercedes-Benz Certified Service Center in Abuja</h1>
+                        <p class="text-white mb-0">Lady Benz Automechanic Ltd® is Abuja's premier Mercedes-Benz specialist, offering manufacturer-approved diagnostics, repairs, and maintenance services. Our award-winning team, led by Engr. Joy Obi Amuche, combines advanced technical expertise with genuine Mercedes-Benz parts to deliver exceptional service quality.</p>
+                        <ul class="list-unstyled text-white mt-4">
+                            <li><i class="fa fa-check text-warning me-2"></i>Factory-trained Mercedes-Benz technicians</li>
+                            <li><i class="fa fa-check text-warning me-2"></i>Genuine OEM parts and specialized tools</li>
+                            <li><i class="fa fa-check text-warning me-2"></i>Comprehensive warranty on all repairs</li>
+                            <li><i class="fa fa-check text-warning me-2"></i>State-of-the-art diagnostic equipment</li>
+                        </ul>
                     </div>
                 </div>
                 <div class="col-lg-6">
-                    <div class="bg-secondary h-100 d-flex flex-column justify-content-center text-center p-5 wow zoomIn" data-wow-delay="0.6s">
+                    <div class="bg-secondary h-100 d-flex flex-column justify-content-center text-center p-5 wow zoomIn rounded-4 shadow" data-wow-delay="0.6s">
                         <h1 class="text-white mb-4">Book For A Service</h1>
-                        <form>
+                        <form id="bookingForm" action="send-booking.php" method="POST">
                             <div class="row g-3">
                                 <div class="col-12 col-sm-6">
-                                    <input type="text" class="form-control border-0 rounded-3" placeholder="Your Name" style="height: 55px;">
+                                    <input type="text" class="form-control border-0 rounded-3 shadow-sm" 
+                                           name="name" placeholder="Your Name" style="height: 55px;" 
+                                           required>
                                 </div>
                                 <div class="col-12 col-sm-6">
-                                    <input type="email" class="form-control border-0 rounded-3" placeholder="Your Email" style="height: 55px;">
+                                    <input type="email" class="form-control border-0 rounded-3 shadow-sm" 
+                                           name="email" placeholder="Your Email" style="height: 55px;" 
+                                           required>
                                 </div>
                                 <div class="col-12 col-sm-6">
-                                    <select class="form-select border-0 rounded-3" style="height: 55px;">
-                                        <option selected>Select A Service</option>
-                                        <option value="1">Service 1</option>
-                                        <option value="2">Service 2</option>
-                                        <option value="3">Service 3</option>
+                                    <input type="tel" class="form-control border-0 rounded-3 shadow-sm" 
+                                           name="phone" placeholder="Your Phone" style="height: 55px;" 
+                                           required pattern="[0-9+\s-()]{10,}">
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                    <select class="form-select border-0 rounded-3 shadow-sm" 
+                                            name="service" style="height: 55px;" required>
+                                        <option value="" selected disabled>Select A Service</option>
+                                        <option value="Mercedes-Benz Diagnostics">Mercedes-Benz Diagnostics</option>
+                                        <option value="Engine & Gearbox Repair">Engine & Gearbox Repair</option>
+                                        <option value="Routine Maintenance">Routine Maintenance</option>
+                                        <option value="ECU Programming">ECU Programming</option>
+                                        <option value="Bodywork & Paint">Bodywork & Paint</option>
+                                        <option value="Technical Training">Technical Training</option>
+                                        <option value="OEM Parts Replacement">OEM Parts Replacement</option>
                                     </select>
                                 </div>
                                 <div class="col-12 col-sm-6">
-                                    <div class="date" id="date1" data-target-input="nearest">
-                                        <input type="text"
-                                            class="form-control border-0 datetimepicker-input rounded-3"
-                                            placeholder="Service Date" data-target="#date1" data-toggle="datetimepicker" style="height: 55px;">
-                                    </div>
+                                    <input type="date" class="form-control border-0 rounded-3 shadow-sm"
+                                           name="preferred_date" style="height: 55px;" required
+                                           min="<?php echo date('Y-m-d'); ?>">
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                    <input type="time" class="form-control border-0 rounded-3 shadow-sm"
+                                           name="preferred_time" style="height: 55px;" required
+                                           min="09:00" max="18:00">
                                 </div>
                                 <div class="col-12">
-                                    <textarea class="form-control border-0 rounded-3" placeholder="Special Request"></textarea>
+                                    <textarea class="form-control border-0 rounded-3 shadow-sm" 
+                                              name="message" rows="3" 
+                                              placeholder="Describe your car issue or request (e.g. model, year, symptoms)" required></textarea>
                                 </div>
                                 <div class="col-12">
-                                    <button class="btn btn-info w-100 py-3 rounded-pill" type="submit">Book Now</button>
+                                    <button class="btn btn-warning w-100 py-3 rounded-pill fw-bold" 
+                                            type="submit" id="submitBtn">
+                                        Book Now
+                                        <i class="fa fa-arrow-right ms-2"></i>
+                                    </button>
                                 </div>
                             </div>
                         </form>
+                        <div id="bookingStatus" class="mt-3" role="alert"></div>
                     </div>
                 </div>
             </div>
@@ -283,44 +341,75 @@
     <!-- Booking End -->
 
 
-    <!-- Testimonial Start -->
+       <!-- Testimonial Start -->
     <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
         <div class="container">
             <div class="text-center">
-                <h6 class="text-warning text-uppercase">// Testimonial //</h6>
-                <h1 class="mb-5">Our Clients Say!</h1>
+                <h6 class="text-warning text-uppercase">// Client Testimonials //</h6>
+                <h1 class="mb-5">What Our Clients Say</h1>
             </div>
             <div class="owl-carousel testimonial-carousel position-relative">
                 <div class="testimonial-item text-center">
-                    <img class="bg-light rounded-circle p-2 mx-auto mb-3" src="img/testimonial-1.jpg" style="width: 80px; height: 80px;">
-                    <h5 class="mb-0">Client Name</h5>
-                    <p>Profession</p>
+                    <img class="bg-light rounded-circle p-2 mx-auto mb-3" src="img/clients/chioma-adenuga.jpg" style="width: 80px; height: 80px;" alt="Chioma Adenuga testimonial">
+                    <h5 class="mb-0">Chioma Adenuga</h5>
+                    <p>Business Executive</p>
                     <div class="testimonial-text bg-light text-center p-4">
-                    <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et eos. Clita erat ipsum et lorem et sit.</p>
+                        <p class="mb-0">"Outstanding service! Lady Benz diagnosed and fixed my ML350's transmission issues when two other workshops couldn't. Their expertise with Mercedes-Benz vehicles is exceptional. Highly recommend their professional team."</p>
+                        <div class="mt-3">
+                            <i class="fa fa-star text-warning"></i>
+                            <i class="fa fa-star text-warning"></i>
+                            <i class="fa fa-star text-warning"></i>
+                            <i class="fa fa-star text-warning"></i>
+                            <i class="fa fa-star text-warning"></i>
+                        </div>
                     </div>
                 </div>
+                
                 <div class="testimonial-item text-center">
-                    <img class="bg-light rounded-circle p-2 mx-auto mb-3" src="img/testimonial-2.jpg" style="width: 80px; height: 80px;">
-                    <h5 class="mb-0">Client Name</h5>
-                    <p>Profession</p>
+                    <img class="bg-light rounded-circle p-2 mx-auto mb-3" src="img/clients/oluwaseun-adebayo.jpg" style="width: 80px; height: 80px;" alt="Oluwaseun Adebayo testimonial">
+                    <h5 class="mb-0">Oluwaseun Adebayo</h5>
+                    <p>Bank Manager</p>
                     <div class="testimonial-text bg-light text-center p-4">
-                    <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et eos. Clita erat ipsum et lorem et sit.</p>
+                        <p class="mb-0">"Engr. Joy and her team are true Mercedes specialists. They performed a complete diagnostic on my E-Class and provided detailed explanations of every issue. Their attention to detail and use of genuine parts is commendable."</p>
+                        <div class="mt-3">
+                            <i class="fa fa-star text-warning"></i>
+                            <i class="fa fa-star text-warning"></i>
+                            <i class="fa fa-star text-warning"></i>
+                            <i class="fa fa-star text-warning"></i>
+                            <i class="fa fa-star text-warning"></i>
+                        </div>
                     </div>
                 </div>
+                
                 <div class="testimonial-item text-center">
-                    <img class="bg-light rounded-circle p-2 mx-auto mb-3" src="img/testimonial-3.jpg" style="width: 80px; height: 80px;">
-                    <h5 class="mb-0">Client Name</h5>
-                    <p>Profession</p>
+                    <img class="bg-light rounded-circle p-2 mx-auto mb-3" src="img/clients/ibrahim-hassan.jpg" style="width: 80px; height: 80px;" alt="Ibrahim Hassan testimonial">
+                    <h5 class="mb-0">Ibrahim Hassan</h5>
+                    <p>Company Director</p>
                     <div class="testimonial-text bg-light text-center p-4">
-                    <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et eos. Clita erat ipsum et lorem et sit.</p>
+                        <p class="mb-0">"Best Mercedes service center in Abuja! They've been maintaining my S-Class for 3 years now. Their ECU programming and diagnostic capabilities are top-notch. The team is professional and their facility is well-equipped."</p>
+                        <div class="mt-3">
+                            <i class="fa fa-star text-warning"></i>
+                            <i class="fa fa-star text-warning"></i>
+                            <i class="fa fa-star text-warning"></i>
+                            <i class="fa fa-star text-warning"></i>
+                            <i class="fa fa-star text-warning"></i>
+                        </div>
                     </div>
                 </div>
+                
                 <div class="testimonial-item text-center">
-                    <img class="bg-light rounded-circle p-2 mx-auto mb-3" src="img/testimonial-4.jpg" style="width: 80px; height: 80px;">
-                    <h5 class="mb-0">Client Name</h5>
-                    <p>Profession</p>
+                    <img class="bg-light rounded-circle p-2 mx-auto mb-3" src="img/clients/aisha-mohammed.jpg" style="width: 80px; height: 80px;" alt="Aisha Mohammed testimonial">
+                    <h5 class="mb-0">Aisha Mohammed</h5>
+                    <p>Medical Doctor</p>
                     <div class="testimonial-text bg-light text-center p-4">
-                    <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et eos. Clita erat ipsum et lorem et sit.</p>
+                        <p class="mb-0">"Lady Benz is simply the best! They've been servicing my GLC 300 since 2023. Their technical knowledge, honest advice, and excellent customer service sets them apart. The workshop is clean and well-organized."</p>
+                        <div class="mt-3">
+                            <i class="fa fa-star text-warning"></i>
+                            <i class="fa fa-star text-warning"></i>
+                            <i class="fa fa-star text-warning"></i>
+                            <i class="fa fa-star text-warning"></i>
+                            <i class="fa fa-star text-warning"></i>
+                        </div>
                     </div>
                 </div>
             </div>

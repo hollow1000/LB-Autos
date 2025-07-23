@@ -108,3 +108,50 @@
     
 })(jQuery);
 
+// ...existing code...
+
+// Counter-Up Functionality
+document.addEventListener("DOMContentLoaded", function () {
+  const counters = document.querySelectorAll('[data-toggle="counter-up"]');
+  counters.forEach(counter => {
+    const animateCount = () => {
+      const target = +counter.textContent.replace(/\D/g, '');
+      let count = 0;
+      const increment = Math.ceil(target / 100);
+      const updateCounter = () => {
+        count += increment;
+        if (count < target) {
+          counter.textContent = count + '+';
+          setTimeout(updateCounter, 20);
+        } else {
+          counter.textContent = target + '+';
+        }
+      };
+      updateCounter();
+    };
+    animateCount();
+  });
+});
+
+// ...existing code...
+// Modal Popup Functionality
+        window.addEventListener('load', function () {
+            const modalEl = 
+    document.getElementById('imagePopup')
+       const popup = new bootstrap.Modal(modalEl);
+        popup.show();
+
+        modalEl.addEventListener('hidden.bs.modal' ,
+        function () {
+            
+        });
+    });
+
+        function closeModal() {
+            const popup = 
+        bootstrap.Modal.getInstance(document.getElementById('imagePopup'));
+        popup.hide();
+
+        document.getElementById('popupCloseX').style.display = 'none' ;
+        }   
+   
