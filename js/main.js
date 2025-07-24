@@ -133,6 +133,14 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+
+$(document).ready(function () {
+    $('.counter').counterUp({
+        delay: 10,
+        time: 1000
+    });
+});
+
 // ...existing code...
 // Modal Popup Functionality
         window.addEventListener('load', function () {
