@@ -310,6 +310,35 @@ body {
     color: #FFFFFF !important;
 }
 
+/* FAQ  */
+/* #faq,
+#faq .accordion,
+#faq .accordion-header,
+#faq .accordion-button,
+#faq .accordion-body {
+  text-align: center !important;
+  justify-content: center !important;
+  align-items: center !important;
+} */
+
+/* Center FAQ accordion headers and buttons */
+#faq .accordion-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+#faq .accordion-button {
+  justify-content: center !important;
+  text-align: center !important;
+  width: 100%;
+}
+
+#faq .accordion-body {
+  text-align: center;
+}
+
 
 /*** Booking ***/
 .booking {
@@ -777,4 +806,4 @@ body {
 .nav-pills .nav-link.active {
     background: #ffc107;
     color: #fff;
-}    
+}
