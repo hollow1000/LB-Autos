@@ -31,11 +31,31 @@ body {
     color: var(--white);
 }
 
+
 /* Buttons */
 .btn-primary {
     background-color: var(--black);
     border-color: var(--black);
 }
+
+.btn-secondary {
+    color: color(#3E58A4);
+
+}
+.btn-first {
+    color: #E3E4E4;
+    border-color: var(--accent);}
+
+.btn-first:hover {
+    background-color: var(--black);
+    color: #E3E4E4 !important;
+    border-color: var(--black);
+}
+.btn-first:hover {
+    background-color: var(--accent);
+    color: #3E58A4 !important;
+    border-color: var(--accent);
+}   
 .btn-primary:hover {
     background-color: grey !important;
     color: #ffffff !important;
@@ -69,8 +89,9 @@ body {
 }
 
 .fw-medium {
-    font-weight: 600 !important;
+    font-weight: 500 !important;
 }
+
 
 .back-to-top {
     position: fixed;
@@ -279,7 +300,7 @@ body {
 }
 
 .page-header-inner {
-    background: rgba(0, 0, 0, .7);
+    background:(0, 0, 0, .7);
 }
 
 .breadcrumb-item + .breadcrumb-item::before {
@@ -806,4 +827,323 @@ body {
 .nav-pills .nav-link.active {
     background: #ffc107;
     color: #fff;
+}
+
+/* Mobile Responsive Improvements */
+
+/* Base Mobile Styles */
+@media (max-width: 991.98px) {
+    /* Improved Navigation */
+    .navbar {
+        padding: 0.5rem 1rem;
+    }
+
+    .navbar-brand {
+        padding: 0.5rem 0;
+    }
+
+    .navbar-toggler {
+        padding: 0.4rem 0.8rem;
+        margin-right: 0.5rem;
+    }
+
+    .navbar-nav {
+        padding: 1rem 0;
+    }
+
+    .navbar-light .navbar-nav .nav-link {
+        padding: 0.8rem 1rem;
+        border-bottom: 1px solid rgba(0,0,0,0.05);
+    }
+
+    /* Container Padding Adjustments */
+    .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    /* Hero Section */
+    .carousel-caption {
+        padding: 1rem;
+    }
+
+    .carousel-caption h1 {
+        font-size: 1.8rem;
+    }
+
+    /* Services Grid */
+    .service-item {
+        margin-bottom: 1rem;
+        padding: 1.5rem;
+    }
+
+    /* Team Section */
+    .team-item {
+        margin-bottom: 2rem;
+    }
+
+    /* Buttons */
+    .btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    /* Testimonials */
+    .testimonial-text {
+        padding: 1.5rem;
+    }
+}
+
+/* Small Mobile Devices */
+@media (max-width: 576px) {
+    /* Typography */
+    h1 {
+        font-size: 1.8rem !important;
+    }
+    
+    h2 {
+        font-size: 1.5rem !important;
+    }
+    
+    h3 {
+        font-size: 1.3rem !important;
+    }
+
+    /* Spacing */
+    .py-5 {
+        padding-top: 2rem !important;
+        padding-bottom: 2rem !important;
+    }
+
+    /* Grid Improvements */
+    .row {
+        margin-left: -10px;
+        margin-right: -10px;
+    }
+
+    .col, [class*="col-"] {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    /* Service Cards */
+    .service-icon {
+        width: 60px;
+        height: 60px;
+    }
+
+    /* Booking Section */
+    .booking {
+        padding: 2rem 1rem;
+    }
+
+    .booking-form {
+        padding: 1rem;
+    }
+
+    /* Footer */
+    .footer {
+        text-align: center;
+    }
+
+    .footer-menu {
+        justify-content: center;
+    }
+
+    .footer .btn.btn-social {
+        margin: 0.3rem;
+    }
+}
+
+/* Landscape Mode */
+@media (max-height: 576px) and (orientation: landscape) {
+    .navbar-collapse {
+        max-height: 80vh;
+        overflow-y: auto;
+    }
+
+    .carousel-caption {
+        padding: 0.5rem;
+    }
+}
+
+/* Tablet Improvements */
+@media (min-width: 577px) and (max-width: 991.98px) {
+    .container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .service-item {
+        margin-bottom: 2rem;
+    }
+
+    .team-item {
+        margin-bottom: 2.5rem;
+    }
+}
+
+/* Loading Performance */
+.lazy-load {
+    opacity: 0;
+    transition: opacity 0.3s ease-in;
+}
+
+.lazy-load.loaded {
+    opacity: 1;
+}
+
+/* Touch Device Optimizations */
+@media (hover: none) {
+    .service-item:hover,
+    .team-item:hover,
+    .btn:hover {
+        transform: none !important;
+    }
+
+    .nav-link:active {
+        background-color: rgba(0,0,0,0.05);
+    }
+}
+
+/* Grid System Improvements */
+.row {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 1.5rem;
+}
+
+@media (max-width: 991.98px) {
+    .row {
+        --bs-gutter-x: 1rem;
+        --bs-gutter-y: 1rem;
+    }
+}
+
+/* Mobile Navigation Improvements */
+@media (max-width: 600px) {
+    /* Right-sided navigation */
+    .navbar-collapse {
+        position: fixed;
+        top: 0;
+        right: -280px; /* Start off-screen from right */
+        left: auto; /* Reset left position */
+        width: 280px;
+        height: 100vh;
+        padding: 1rem;
+        background-color: var(--white);
+        transition: right 0.3s ease; /* Change transition to right */
+        box-shadow: -2px 0 10px rgba(0,0,0,0.1); /* Shadow on left side */
+        overflow-y: auto;
+        z-index: 1050;
+    }
+
+    .navbar-collapse.show {
+        right: 0; /* Slide in from right */
+        left: auto;
+    }
+
+    /* Navbar brand adjustments */
+    .navbar-brand {
+        margin-right: auto;
+        padding: 0.5rem 0;
+    }
+
+    /* Toggle button positioning */
+    .navbar-toggler {
+        margin-left: 0.5rem;
+        margin-right: 0;
+        order: 2; /* Push to right */
+    }
+
+    /* Improved dropdown handling */
+    .navbar-nav .dropdown-menu {
+        position: static !important;
+        float: none;
+        width: 100%;
+        background-color: rgba(0,0,0,0.02);
+        border: none;
+        border-radius: 0;
+        margin: 0;
+        padding: 0;
+        box-shadow: none;
+    }
+
+    .navbar-nav .dropdown-item {
+        padding: 0.8rem 1.5rem;
+        color: var(--black);
+        border-bottom: 1px solid rgba(0,0,0,0.05);
+    }
+
+    .navbar-nav .dropdown-toggle::after {
+        position: absolute;
+        right: 1rem;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    /* Active states */
+    .navbar-nav .dropdown-item.active,
+    .navbar-nav .dropdown-item:active {
+        background-color: var(--accent);
+        color: var(--white);
+    }
+
+    /* Navigation items styling */
+    .navbar-nav {
+        margin: 0;
+        padding: 1rem 0;
+    }
+
+    .navbar-nav .nav-item {
+        position: relative;
+        width: 100%;
+    }
+
+    .navbar-nav .nav-link {
+        padding: 1rem;
+        border-bottom: 1px solid rgba(0,0,0,0.05);
+        color: var(--black);
+    }
+
+    /* Close button positioning */
+    .nav-close {
+        position: absolute;
+        top: 1rem;
+        left: 1rem; /* Move to left side */
+        right: auto;
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        color: var(--black);
+        cursor: pointer;
+        z-index: 1052;
+    }
+}
+
+/* Extra small device improvements */
+@media (max-width: 400px) {
+    .navbar-collapse {
+        width: 100%; /* Full width for very small devices */
+        right: -100%; /* Start fully off-screen */
+    }
+
+    .navbar-brand {
+        max-width: calc(100% - 100px); /* Prevent overlap with toggle */
+    }
+
+    .navbar-brand img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Adjusted padding for better touch targets */
+    .navbar-nav .nav-link,
+    .navbar-nav .dropdown-item {
+        padding: 1rem;
+    }
+}
+
+/* Prevent body scroll when nav is open */
+body.nav-open {
+    overflow: hidden;
 }

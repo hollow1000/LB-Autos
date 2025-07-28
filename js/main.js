@@ -108,8 +108,6 @@
     
 })(jQuery);
 
-// ...existing code...
-
 // Counter-Up Functionality
 document.addEventListener("DOMContentLoaded", function () {
   const counters = document.querySelectorAll('[data-toggle="counter-up"]');
@@ -141,7 +139,6 @@ $(document).ready(function () {
     });
 });
 
-// ...existing code...
 // Modal Popup Functionality
         window.addEventListener('load', function () {
             const modalEl = 
@@ -161,5 +158,47 @@ $(document).ready(function () {
         popup.hide();
 
         document.getElementById('popupCloseX').style.display = 'none' ;
-        }   
-   
+        }
+
+// Add this to your main JavaScript file
+document.addEventListener('DOMContentLoaded', function() {
+    const navbarToggler = document.querySelector('.navbar-toggler');
+    const navbarCollapse = document.querySelector('.navbar-collapse');
+    const body = document.body;
+
+    // Toggle navigation
+    navbarToggler?.addEventListener('click', function() {
+        body.classList.toggle('nav-open');
+    });
+
+    // Handle dropdown toggles
+    const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+    dropdownToggles.forEach(toggle => {
+        toggle.addEventListener('click', function(e) {
+            e.preventDefault();
+            const dropdownMenu = this.nextElementSibling;
+            const isExpanded = this.getAttribute('aria-expanded') === 'true';
+            
+            // Close other dropdowns
+            dropdownToggles.forEach(otherToggle => {
+                if (otherToggle !== this) {
+                    otherToggle.setAttribute('aria-expanded', 'false');
+                    otherToggle.nextElementSibling.classList.remove('show');
+                }
+            });
+
+            // Toggle current dropdown
+            this.setAttribute('aria-expanded', !isExpanded);
+            dropdownMenu.classList.toggle('show');
+        });
+    });
+
+    // Close nav when clicking outside
+    document.addEventListener('click', function(e) {
+        if (!navbarCollapse.contains(e.target) && !navbarToggler.contains(e.target)) {
+            navbarCollapse.classList.remove('show');
+            body.classList.remove('nav-open');
+        }
+    });
+});
+
