@@ -1393,3 +1393,19 @@ body.nav-open {
     background-color: rgba(155, 160, 176, 0.1);
     color: var(--accent);
 }
+
+.carousel-img {
+  width: 100%;
+  aspect-ratio: 16/9; /* responsive */
+  object-fit: cover;
+}
+
+.carousel-caption {
+  background: rgba(0,0,0,0.4);
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+}
+.carousel-caption h1 {
+  font-size: 2rem;
+  font-weight: 700;
+}
