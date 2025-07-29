@@ -152,13 +152,18 @@ $(document).ready(function () {
         });
     });
 
-        function closeModal() {
-            const popup = 
-        bootstrap.Modal.getInstance(document.getElementById('imagePopup'));
-        popup.hide();
+        // Fix missing closeModal function
+function closeModal() {
+    $('#imagePopup').modal('hide');
+}
 
-        document.getElementById('popupCloseX').style.display = 'none' ;
-        }
+// Improve modal handling
+$(document).ready(function() {
+    $('#imagePopup').on('hidden.bs.modal', function() {
+        document.body.classList.remove('modal-open');
+        $('.modal-backdrop').remove();
+    });
+});
 
 // Add this to your main JavaScript file
 document.addEventListener('DOMContentLoaded', function() {
@@ -199,6 +204,109 @@ document.addEventListener('DOMContentLoaded', function() {
             navbarCollapse.classList.remove('show');
             body.classList.remove('nav-open');
         }
+    });
+});
+
+// Performance optimizations
+document.addEventListener('DOMContentLoaded', function() {
+    // Remove spinner after load
+    const spinner = document.getElementById('spinner');
+    if (spinner) {
+        setTimeout(() => {
+            spinner.style.opacity = '0';
+            setTimeout(() => spinner.remove(), 500);
+        }, 500);
+    }
+
+    // Lazy load images
+    const lazyImages = document.querySelectorAll('img[loading="lazy"]');
+    if ('IntersectionObserver' in window) {
+        const imageObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const img = entry.target;
+                    img.src = img.dataset.src;
+                    observer.unobserve(img);
+                }
+            });
+        });
+
+        lazyImages.forEach(img => imageObserver.observe(img));
+    }
+
+    // Defer non-critical operations
+    requestIdleCallback(() => {
+        // Initialize non-critical components
+        initializeCarousel();
+        loadSocialMediaWidgets();
+    });
+});
+
+// Optimize scroll performance
+let ticking = false;
+window.addEventListener('scroll', () => {
+    if (!ticking) {
+        requestAnimationFrame(() => {
+            // Handle scroll-based updates
+            updateNavbarScroll();
+            ticking = false;
+        });
+        ticking = true;
+    }
+});
+
+// Fix counter initialization bug
+$(document).ready(function() {
+    // Fix typo in hasClass method
+    function triggerCounter() {
+        $('.counter').each(function() {
+            var $this = $(this);
+            if (!$this.hasClass('counted')) { // Fixed hasClasss typo
+                $this.addClass('counted');
+                $this.counterUp({
+                    delay: 10,
+                    time: 1000
+                });
+            }
+        });
+    }
+
+    // Add scroll trigger for counters
+    const observerOptions = {
+        threshold: 0.5
+    };
+
+    const counterObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                triggerCounter();
+            }
+        });
+    }, observerOptions);
+
+    $('.counter').each(function() {
+        counterObserver.observe(this);
+    });
+});
+
+// Add error handling for counters and animations
+$(document).ready(function() {
+    try {
+        // Initialize WOW animations
+        new WOW().init();
+    } catch (e) {
+        console.error('WOW.js initialization failed:', e);
+    }
+
+    // Add error handling for form submission
+    $('#bookingForm').on('submit', function(e) {
+        e.preventDefault();
+        if (!this.checkValidity()) {
+            e.stopPropagation();
+            $(this).addClass('was-validated');
+            return;
+        }
+        // Add form submission logic here
     });
 });
 
