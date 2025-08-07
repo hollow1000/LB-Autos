@@ -10,6 +10,11 @@
     font-size: 0.8rem !important;
 }
 
+html, body{
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
 
 body {
     color: var(--black);
@@ -538,6 +543,12 @@ body {
 .footer {
     background: linear-gradient(rgba(0, 0, 0, .9), rgba(0, 0, 0, .9)), url(../img/IMG-20250715-WA0073.jpg) center center no-repeat;
     background-size: cover;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
 }
 
 .footer .btn.btn-social {
@@ -590,6 +601,18 @@ body {
 
 .footer .copyright a {
     color: var(--light);
+}
+
+.copyright {
+    margin-bottom: 0 !important;
+    padding-bottom: 4px !important;
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+/* Remove any bottom margin from last section */
+section:last-of-type {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
 }
 
 .footer .footer-menu a {
